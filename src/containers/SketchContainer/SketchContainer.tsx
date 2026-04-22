@@ -3,6 +3,7 @@
 //
 
 import { Excalidraw, MainMenu } from '@excalidraw/excalidraw';
+import { type ExcalidrawElement } from '@excalidraw/excalidraw/element/types';
 import { type ExcalidrawImperativeAPI, type ExcalidrawProps } from '@excalidraw/excalidraw/types';
 // Excalidraw ships its stylesheet as a sibling asset. `vite-plugin-css-injected-by-js`
 // picks this up and inlines it into `plugin.mjs` so the single distributed artifact
@@ -32,8 +33,13 @@ export const SketchContainer = ({ role, subject: sketch, attendableId }: SketchC
   const { themeMode } = useThemeContext();
   const [down, setDown] = useState<boolean>(false);
   const excalidrawAPIRef = useRef<ExcalidrawImperativeAPI>(null);
+  // Buffer the most recent elements from the adapter so that however the adapter
+  // and the <Excalidraw/> imperative API settle in (either order), we always hand
+  // the current scene to the component once both are ready.
+  const latestElementsRef = useRef<readonly unknown[]>([]);
   const adapter = useStoreAdapter(sketch, {
     onUpdate: ({ elements }) => {
+      latestElementsRef.current = elements;
       excalidrawAPIRef.current?.updateScene({ elements });
     },
   });
@@ -103,7 +109,16 @@ export const SketchContainer = ({ role, subject: sketch, attendableId }: SketchC
       <Excalidraw
         // Force instance per sketch object. Otherwise, sketch shares the same instance.
         key={attendableId}
-        excalidrawAPI={(api) => (excalidrawAPIRef.current = api)}
+        excalidrawAPI={(api) => {
+          excalidrawAPIRef.current = api;
+          // The adapter may have finished loading before the API bound — replay the
+          // latest snapshot so the scene is never blank just because the two hooks
+          // resolved in a different order.
+          const buffered = latestElementsRef.current as ExcalidrawElement[];
+          if (buffered.length > 0) {
+            api.updateScene({ elements: buffered });
+          }
+        }}
         initialData={{ elements: adapter.getElements() }}
         // gridModeEnabled={true}
         // detectScroll={false}

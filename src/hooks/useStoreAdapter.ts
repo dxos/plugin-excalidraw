@@ -6,10 +6,8 @@ import { useEffect, useState } from 'react';
 
 import { createDocAccessor } from '@dxos/echo-db';
 import { useObject } from '@dxos/echo-react';
-import { invariant } from '@dxos/invariant';
-import { log } from '@dxos/log';
 
-import { EXCALIDRAW_SCHEMA, type Excalidraw } from '#types';
+import { type Excalidraw } from '#types';
 
 import { ExcalidrawStoreAdapter, type ExcalidrawStoreAdapterProps } from './adapter';
 
@@ -22,17 +20,11 @@ export const useStoreAdapter = (object?: Excalidraw.Excalidraw, options: Excalid
   const [canvas] = useObject(object?.canvas);
 
   useEffect(() => {
-    if (!object || !canvas) {
-      return;
-    }
-
-    if (canvas.schema !== EXCALIDRAW_SCHEMA) {
-      log.warn('unexpected canvas schema', { schema: canvas.schema, expected: EXCALIDRAW_SCHEMA });
+    if (!canvas) {
       return;
     }
 
     const t = setTimeout(async () => {
-      invariant(object.canvas);
       const accessor = createDocAccessor(canvas, ['content']);
       await adapter.open(accessor);
       forceUpdate({});
@@ -42,7 +34,7 @@ export const useStoreAdapter = (object?: Excalidraw.Excalidraw, options: Excalid
       clearTimeout(t);
       void adapter.close();
     };
-  }, [object, canvas]);
+  }, [canvas]);
 
   return adapter;
 };
