@@ -26,6 +26,13 @@ export default defineConfig({
     // Inline every asset as a data URL. GitHub Releases sign each asset with a
     // per-file URL, so sibling-file imports from plugin.mjs can't resolve.
     assetsInlineLimit: () => true,
+    // Convert mixed-ESM-and-CJS bundled deps (e.g. transitive `react-virtualized`,
+    // some react ecosystem packages) so their `require('react')` calls become ES
+    // imports — otherwise the browser bundle ships a bare `require(...)` that the
+    // runtime doesn't expose.
+    commonjsOptions: {
+      transformMixedEsModules: true,
+    },
     rollupOptions: {
       output: {
         // Produce a single plugin.mjs for GitHub Release distribution.
