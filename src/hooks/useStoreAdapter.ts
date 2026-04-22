@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { createDocAccessor } from '@dxos/echo-db';
 import { invariant } from '@dxos/invariant';
 import { log } from '@dxos/log';
+
 import { EXCALIDRAW_SCHEMA, type Excalidraw } from '#types';
 
 import { ExcalidrawStoreAdapter, type ExcalidrawStoreAdapterProps } from './adapter';
@@ -14,19 +15,25 @@ import { ExcalidrawStoreAdapter, type ExcalidrawStoreAdapterProps } from './adap
 export const useStoreAdapter = (object?: Excalidraw.Excalidraw, options: ExcalidrawStoreAdapterProps = {}) => {
   const [adapter] = useState(new ExcalidrawStoreAdapter(options));
   const [_, forceUpdate] = useState({});
+  // `object.canvas.target` is a Ref and resolves lazily — re-run the effect once it
+  // populates, otherwise we early-return before the canvas is ready and silently
+  // leave the adapter closed.
+  const canvasTarget = object?.canvas.target;
+  const canvasSchema = canvasTarget?.schema;
+
   useEffect(() => {
-    if (!object) {
+    if (!object || !canvasTarget) {
       return;
     }
 
-    if (object.canvas.target?.schema !== EXCALIDRAW_SCHEMA) {
-      log.warn('invalid schema', { schema: object.canvas.target?.schema });
+    if (canvasSchema !== EXCALIDRAW_SCHEMA) {
+      log.warn('unexpected canvas schema', { schema: canvasSchema, expected: EXCALIDRAW_SCHEMA });
       return;
     }
 
     const t = setTimeout(async () => {
       invariant(object.canvas);
-      const accessor = createDocAccessor(object.canvas.target!, ['content']);
+      const accessor = createDocAccessor(canvasTarget, ['content']);
       await adapter.open(accessor);
       forceUpdate({});
     });
@@ -35,7 +42,7 @@ export const useStoreAdapter = (object?: Excalidraw.Excalidraw, options: Excalid
       clearTimeout(t);
       void adapter.close();
     };
-  }, [object]);
+  }, [object, canvasTarget, canvasSchema]);
 
   return adapter;
 };
