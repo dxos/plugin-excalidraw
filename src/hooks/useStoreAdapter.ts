@@ -5,6 +5,7 @@
 import { useEffect, useState } from 'react';
 
 import { createDocAccessor } from '@dxos/echo-db';
+import { useObject } from '@dxos/echo-react';
 import { invariant } from '@dxos/invariant';
 import { log } from '@dxos/log';
 
@@ -15,25 +16,24 @@ import { ExcalidrawStoreAdapter, type ExcalidrawStoreAdapterProps } from './adap
 export const useStoreAdapter = (object?: Excalidraw.Excalidraw, options: ExcalidrawStoreAdapterProps = {}) => {
   const [adapter] = useState(new ExcalidrawStoreAdapter(options));
   const [_, forceUpdate] = useState({});
-  // `object.canvas.target` is a Ref and resolves lazily — re-run the effect once it
-  // populates, otherwise we early-return before the canvas is ready and silently
-  // leave the adapter closed.
-  const canvasTarget = object?.canvas.target;
-  const canvasSchema = canvasTarget?.schema;
+  // `useObject` subscribes to the Ref and re-renders when the canvas resolves, so the
+  // effect below fires once with a real target instead of relying on `.target` (which
+  // doesn't notify React of its async load).
+  const [canvas] = useObject(object?.canvas);
 
   useEffect(() => {
-    if (!object || !canvasTarget) {
+    if (!object || !canvas) {
       return;
     }
 
-    if (canvasSchema !== EXCALIDRAW_SCHEMA) {
-      log.warn('unexpected canvas schema', { schema: canvasSchema, expected: EXCALIDRAW_SCHEMA });
+    if (canvas.schema !== EXCALIDRAW_SCHEMA) {
+      log.warn('unexpected canvas schema', { schema: canvas.schema, expected: EXCALIDRAW_SCHEMA });
       return;
     }
 
     const t = setTimeout(async () => {
       invariant(object.canvas);
-      const accessor = createDocAccessor(canvasTarget, ['content']);
+      const accessor = createDocAccessor(canvas, ['content']);
       await adapter.open(accessor);
       forceUpdate({});
     });
@@ -42,7 +42,7 @@ export const useStoreAdapter = (object?: Excalidraw.Excalidraw, options: Excalid
       clearTimeout(t);
       void adapter.close();
     };
-  }, [object, canvasTarget, canvasSchema]);
+  }, [object, canvas]);
 
   return adapter;
 };
