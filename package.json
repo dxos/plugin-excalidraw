@@ -1,7 +1,7 @@
 {
   "name": "dxos-plugin-excalidraw",
   "private": true,
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Excalidraw sketch plugin for DXOS Composer — standalone community distribution of the @dxos/plugin-excalidraw package.",
   "type": "module",
   "scripts": {
@@ -56,6 +56,7 @@
     "@vitejs/plugin-react": "^6.0.0",
     "typescript": "~5.9.0",
     "vite": "^8.0.0",
+    "vite-plugin-css-injected-by-js": "^5.0.1",
     "vite-plugin-wasm": "^3.6.0"
   }
 }

@@ -111,6 +111,9 @@ importers:
       vite:
         specifier: ^8.0.0
         version: 8.0.9(@types/node@25.6.0)(jiti@2.6.1)(sass@1.99.0)(yaml@2.8.3)
+      vite-plugin-css-injected-by-js:
+        specifier: ^5.0.1
+        version: 5.0.1(vite@8.0.9(@types/node@25.6.0)(jiti@2.6.1)(sass@1.99.0)(yaml@2.8.3))
       vite-plugin-wasm:
         specifier: ^3.6.0
         version: 3.6.0(vite@8.0.9(@types/node@25.6.0)(jiti@2.6.1)(sass@1.99.0)(yaml@2.8.3))
@@ -429,7 +432,7 @@ packages:
     resolution: {integrity: sha512-uekIGetywIgopfD97oDL5PfeezkFpNhwlzlaEYNOA0N6ghdsOvh/HYjSMek5Q2O1PYvRSDFcqFVJl4r4ZBwOow==}
 
   '@dxos/ai@https://pkg.pr.new/dxos/dxos/@dxos/ai@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-/pAfx/CnlgZZFCU3t8MwLJeKUkvLHh0063wQZcHW2gfk/dZqnW61EbKNDhpiT/HvpDwCeC3qLGJiLf+KyTk8qg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/ai@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/ai@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       effect: 3.20.0
@@ -445,7 +448,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/app-framework@https://pkg.pr.new/dxos/dxos/@dxos/app-framework@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-Kb2uwWiM8u0Xg+fxEv/5I/ch9JcoU6Um/xLBAXfKSvscGqh9jKVYktaQ5BEMAMI+8I8/YYYe/3d1nz9jhtcsfw==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/app-framework@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/app-framework@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@effect-atom/atom-react': ^0.5.0
@@ -455,7 +458,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/app-graph@https://pkg.pr.new/dxos/dxos/@dxos/app-graph@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-1gl3+LdRZDrAR8jkzpAan9ipeiw9xjIpD2mIs0/XSdXSKycgZ4GzaLRh7WuMqWmhBINsnOZgarAZFXEXPQTWRw==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/app-graph@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/app-graph@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -475,7 +478,7 @@ packages:
       react: ~19.2.3
 
   '@dxos/app-toolkit@https://pkg.pr.new/dxos/dxos/@dxos/app-toolkit@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-xWX6DMG+6hHzsg/+boLrqQaEyaP3HjP6uUYlUfKZJzJdUa3c3suQYK85njeevdTkHkjrx9b8sOXndYYoge5Xog==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/app-toolkit@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/app-toolkit@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@effect-atom/atom-react': ^0.5.0
@@ -483,7 +486,7 @@ packages:
       react: ~19.2.3
 
   '@dxos/assistant@https://pkg.pr.new/dxos/dxos/@dxos/assistant@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-wiB5bU5yThp89x172BuVwEEGEVZrO1BC3OFSuc0q9N82Z6r6Uc/eXwlntBDahdVob2Jucyw+9nuoi9+ue2AOAQ==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/assistant@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/assistant@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       effect: 3.20.0
@@ -493,17 +496,17 @@ packages:
     version: 0.8.3
 
   '@dxos/async@https://pkg.pr.new/dxos/dxos/@dxos/async@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-5jNNFEoZIvLo1/z9zjTtbgQ1z4XTwLebzDysCx0v0SLATItIKcVOIAQ0Z+Tsh+2QHP3LzhFIIa7NnP8WVNXXWA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/async@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/async@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/blueprints@https://pkg.pr.new/dxos/dxos/@dxos/blueprints@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-ligIk1KTJQJMmN/41lNwb/JjGnBTx293TwZAiXzlns2oB+vHBgaqwykLAbUfwoJI/RKR5Qp0TFt2h9hP9crwDw==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/blueprints@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/blueprints@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       effect: 3.20.0
 
   '@dxos/cli-util@https://pkg.pr.new/dxos/dxos/@dxos/cli-util@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-t3F+R0aU+j7cSVtkBCuEmEj7qi7vOHSGqADVwaEEsNQHj2InLu1RPZcz33zLa3p/rFB3kkXj8kww6RUa7NuzuA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/cli-util@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/cli-util@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       effect: 3.20.0
@@ -515,13 +518,13 @@ packages:
       effect: 3.20.0
 
   '@dxos/client-protocol@https://pkg.pr.new/dxos/dxos/@dxos/client-protocol@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-WiDQb6+zNIYHPly3jXZcpfKxSR+5L8O+7h0KT1S0upgQ2WjxFFYPIO/2tSFzzUNKG+mjlDSPpq87j3yiB7LdeQ==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/client-protocol@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/client-protocol@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       effect: 3.20.0
 
   '@dxos/client-services@https://pkg.pr.new/dxos/dxos/@dxos/client-services@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-yusiS57ec4vKFBVQvT0MNW+zLdLQEcqYkr8fb0iJKHd3zASeyuU0EDc+W5sXNc/HHqx6PLoMmB4KQhbFyxSxNw==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/client-services@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/client-services@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/client@https://pkg.pr.new/dxos/dxos/@dxos/client@45a4dd2':
@@ -532,45 +535,45 @@ packages:
       effect: 3.20.0
 
   '@dxos/client@https://pkg.pr.new/dxos/dxos/@dxos/client@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-24dm8TqCyXI1+HZIB2+1TkX/F/36S+p60nAFj3Qww9d6pbNP954tiH/THyVrQQwngmOzx94kqJOpXjn92sXQyg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/client@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/client@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     engines: {node: '>=12.0.0'}
     peerDependencies:
       effect: 3.20.0
 
   '@dxos/codec-protobuf@https://pkg.pr.new/dxos/dxos/@dxos/codec-protobuf@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-/KEXX/Es9AvsHJoxnz8cJ5gJUas+RSQqQQAA6xE55ssyBdeyyNCuGGf+esHlfJ4XHVQeXnrVBavpf4Ud8PJM2g==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/codec-protobuf@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/codec-protobuf@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/conductor@https://pkg.pr.new/dxos/dxos/@dxos/conductor@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-2Hzhhfk0pyFMDamBRxyVGLfdiEnd1TUuiNpBIN9dm7/+l4cI+h+CHZ5WtzkvCZls7io3Jn+bcoCq/uIserUQ/w==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/conductor@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/conductor@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/config@https://pkg.pr.new/dxos/dxos/@dxos/config@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-ds3ZOyD80r1Y6q3z1rJsnBCxCy6CuZHVLTznydfnMh/A84vLMknqGusFGUUQfHQKC2eJjl/yQdFU2KKrE+/sSg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/config@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/config@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/context@https://pkg.pr.new/dxos/dxos/@dxos/context@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-/cmDDPkjCtrlDp+N8J4uP5s6UBaNPM7Tgte4emeAZfumLdDdayH8MRScWBh1vCVEfUGV5zyq526oi0Yi6hD6LA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/context@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/context@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/credentials@https://pkg.pr.new/dxos/dxos/@dxos/credentials@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-ggAu+VqLCBRAfWVkDJxqYWMARtcg81/cBMLkk9aFqGXUigQXaKNjmCe6JV3uy6XFzmqh7GcQ802H97k1iswXYA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/credentials@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/credentials@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/crypto@https://pkg.pr.new/dxos/dxos/@dxos/crypto@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-DZqFXLnzN0Ds9TeUcMl0HQrXwHyIi+VBNxHu8GRTVWSZvrnE0PdM1fGfagWv/R2nQGBxRpnZzuMajuCbopXJkg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/crypto@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/crypto@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/debug@0.8.3':
     resolution: {integrity: sha512-sDsOvwejoVKdLPpBK3yd4RAX8/sZf3C4ZtmmSJm9rmb8kv6NcyJgiPYZZFOJIArEL6Xm4Z9aHfDhOjrK8p4YtQ==}
 
   '@dxos/debug@https://pkg.pr.new/dxos/dxos/@dxos/debug@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-vUo6lQFVmKsZRKGH++DAdllmjIlMIMj8xouIrE9SeUEVLTlZT6vatKiJOYqhIIVBW8EsakPfudsBA7XC61s+Tw==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/debug@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/debug@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/devtools@https://pkg.pr.new/dxos/dxos/@dxos/devtools@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-a74f1EqkSE2gAfa25QAkvMSNBdSn0Uz8h5yboNu3M5IfivyOAUGKyPOsdTgrltbjIRmLQue6cKmrSerqFsD+Ng==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/devtools@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/devtools@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@babel/core': ^7.18.13
@@ -580,11 +583,11 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/display-name@https://pkg.pr.new/dxos/dxos/@dxos/display-name@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-DxLqEzTZbJxmZJtt2XvztbQ3dNiujzVqphnczBF6v4bPBfttRPXoNCnPejFP+C2MlCEHwYXrmSEv4wAwpx5KAA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/display-name@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/display-name@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/echo-atom@https://pkg.pr.new/dxos/dxos/@dxos/echo-atom@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-BvFvh4+wzvUDkrRl+UM/NzJqO6xc2SdGoss4ncwqtyVeXC6joCkc87sF69BqQ9+txVqzPJcdMNuEp19idrA1vg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/echo-atom@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/echo-atom@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       effect: 3.20.0
@@ -594,23 +597,23 @@ packages:
     version: 0.8.3
 
   '@dxos/echo-db@https://pkg.pr.new/dxos/dxos/@dxos/echo-db@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-logcsxGiSLl6EUSbOS9Ljm+CzxrmSNWq7bViFlmhH7Q0e68GNoQO3q7Gl4FL2le33eyaea7QEe5L9KlTs02S2w==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/echo-db@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/echo-db@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/echo-pipeline@https://pkg.pr.new/dxos/dxos/@dxos/echo-pipeline@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-E7sh70wtmWPE1Ro3ERU2wWpJYGYNx2KhA525XFAF7dpFG4iIN5TkqzloAL2P7ASJjbU31gagX7Ru4WHp5dzNAg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/echo-pipeline@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/echo-pipeline@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/echo-protocol@https://pkg.pr.new/dxos/dxos/@dxos/echo-protocol@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-xP8yi/sOXfCiJP78OK55MQGvj15dZT/d0PBwWhKtlp88SRc6SrWCRizMJzVRvFUiCX3K0Kj8X68EDbuL+bbFmQ==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/echo-protocol@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/echo-protocol@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/echo-query@https://pkg.pr.new/dxos/dxos/@dxos/echo-query@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-LZLrsyr1wccNm5UMkvqpFoliFQ6Tn+2nJQZgO8FX+9y5GhGB1MY828RderHfVsE269fMUoQD8F1jljYQBgcj7Q==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/echo-query@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/echo-query@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/echo-react@https://pkg.pr.new/dxos/dxos/@dxos/echo-react@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-rbcv/h+1hiZszg1aFrD9COF87U/u/bFE2AGKM7yvfoUyH7Sg964biXKOqzkSKvou1hZZUn2smWiAOEWq0/zetQ==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/echo-react@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/echo-react@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       react: ~19.2.3
@@ -620,11 +623,11 @@ packages:
     version: 0.8.3
 
   '@dxos/echo@https://pkg.pr.new/dxos/dxos/@dxos/echo@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-OnAP936oK0yiuB2pSfoibEvQT7qP8dOshBJuMPSE85rN0yABgBmTGPx+af31gQZayiRcBAqobs3C5AB53nkr8Q==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/echo@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/echo@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/edge-client@https://pkg.pr.new/dxos/dxos/@dxos/edge-client@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-c6grQ8hHoek/91CSaD2Li6qIkXwKfnec0L8aIRUD2D3IX+tRXY8qggk+kDdpTpPiypK/heGdvSlAE/pJQ6DWHA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/edge-client@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/edge-client@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       effect: 3.20.0
@@ -638,7 +641,7 @@ packages:
       effect: 3.20.0
 
   '@dxos/effect@https://pkg.pr.new/dxos/dxos/@dxos/effect@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-I8je0bK6brlKYckIAqkE9yh7/C6CsFiVEQTeHUmTXySLTTA9JQkD1y+IudTsTBJmqpNaGyq6gUY0dowqNifteQ==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/effect@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/effect@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@effect/platform': 0.94.4
@@ -646,41 +649,41 @@ packages:
       effect: 3.20.0
 
   '@dxos/errors@https://pkg.pr.new/dxos/dxos/@dxos/errors@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-sgTAlmMcVMPJ02nh5oZQp/059G3oMVgfpHixeb2aj0wkx3LzRDlS0N1fHTtYoOiKqcCZ+dDHU/BOvMB5Ox7MZg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/errors@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/errors@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/feed-store@https://pkg.pr.new/dxos/dxos/@dxos/feed-store@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-nWw2BdT4CyWOEYv43dJ1kJvcEAx5GDCvDQ2d/DO27KUVlZGOFLI7m24GJXTIL/vSqeu5vg7uZ2YCFzeTv+fOgw==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/feed-store@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/feed-store@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/feed@https://pkg.pr.new/dxos/dxos/@dxos/feed@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-wvNLCHN+7cqepV4eXVmZImk9Bk+Lg22HpZXGHWojgM5abI6LJwGHF95dPPW4bOFjfjgFOST+A9JyJrkDHzwmyg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/feed@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/feed@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/functions-runtime-cloudflare@https://pkg.pr.new/dxos/dxos/@dxos/functions-runtime-cloudflare@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-wpdTlaX8dD3XHBX12Y7bjr+T5s4oVyEoxQ58WW1BWfhJaJNDnG6mNjvyYx5UJP64Qec7mXcPVIgXHhAwdf6PyA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/functions-runtime-cloudflare@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/functions-runtime-cloudflare@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/functions-runtime@https://pkg.pr.new/dxos/dxos/@dxos/functions-runtime@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-I5TNwIotunALW9XdKuqRA6c5KlMORKpSBmD5kmEUjaxQteEWBFNRLhNLdNyfzfYlipHfO6KuvVJ0/ooTdll7pg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/functions-runtime@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/functions-runtime@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/functions@https://pkg.pr.new/dxos/dxos/@dxos/functions@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-hBQPban3kDuzzV/d3f/pKkWl9FjAI8WC5S9UZIUZz8CUO2Mxuc3wVXmYe04k5lUGJqWCHdc7LojjbL5kDCQL/g==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/functions@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/functions@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/graph@https://pkg.pr.new/dxos/dxos/@dxos/graph@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-FBtqDOBhoeJb355k4wOv3TfBeYLKUF9sfayOBs1ImZoXgPNyxPdiKIaoSOLdDAgnVQ4NeqGz9jKXgUSw4rtPPg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/graph@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/graph@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       effect: 3.20.0
 
   '@dxos/hypercore@https://pkg.pr.new/dxos/dxos/@dxos/hypercore@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-pTyjwQw0PRROOsRhTjYqxdq6QwkM0AOy3Qx7NfX5FZPuiaGdsr/m4/3HTsnduLLlRFE3+2mMcUK2dr6A6nXfMw==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/hypercore@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/hypercore@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/index-core@https://pkg.pr.new/dxos/dxos/@dxos/index-core@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-twF6DAjUxt52lC5gH7hi7CTCUDutMQV8RYVWSmnf5g94u8uzixQqXS24TTVhXgZ4XWUJDpgkU9bkQ5qJG9gpUg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/index-core@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/index-core@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/invariant@0.8.3':
@@ -691,40 +694,40 @@ packages:
     version: 0.8.3
 
   '@dxos/invariant@https://pkg.pr.new/dxos/dxos/@dxos/invariant@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-nDlRLzpmmynv5rGk/Ag0Pcd2WOwmeqyCaUcx+gYwZlrDxvY58xEURZIysNdsuD38ii2j4rGkeYE6Hn4vx/+NzA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/invariant@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/invariant@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/keyboard@https://pkg.pr.new/dxos/dxos/@dxos/keyboard@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-v3Pf5HBukPHITie0rhBVcG7BVGvkTFSv4ZPsHADnqvnsOPNLoQBgvevIc4rC6L6P/Z8HbHhlqbakJDPZiixZwg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/keyboard@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/keyboard@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/keyring@https://pkg.pr.new/dxos/dxos/@dxos/keyring@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-ljxeUo7sKZaDMmhOTi0sz7Nq3Rid5nsclBDDzqBJylSzXe8zm0sOE8g0lIHZguezPf1g1W8mTtGu/UAmZtG79w==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/keyring@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/keyring@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/keys@0.8.3':
     resolution: {integrity: sha512-+ht+usY5oFawxnZaojtACBRQMj8lLzmh+P0QrJ6MAw8UpCqD+NkTC3IdWnHncUJZyAd597k21Kr1NCn8ukFsAg==}
 
   '@dxos/keys@https://pkg.pr.new/dxos/dxos/@dxos/keys@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-BoQbK1PAyO4XlLHwlpA6Co/gjnI8J3jkH9F3e0w5Rzpzehwf8luBvPddvDJY2mSBGcxLhajwSzSesVDqxh7ghA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/keys@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/keys@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       effect: 3.20.0
 
   '@dxos/kv-store@https://pkg.pr.new/dxos/dxos/@dxos/kv-store@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-7VbmHd22b2fqq3I/R9/067hZysyfcaTdf4UIk3fp0Z8+lcEhsY4vjzF+rx9P0kAfLimKUNX14SBUba/B4TAzBw==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/kv-store@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/kv-store@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/lit-grid@https://pkg.pr.new/dxos/dxos/@dxos/lit-grid@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-rwy0cFA/ODW5zfLEZlZ2Th6jLIKPKb8jHaeuT4nlyHwmzME6XEi22cpgJ4At4Sa7O8E2AJrB1RNaHTw8ymMAcw==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/lit-grid@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/lit-grid@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/lit-ui@https://pkg.pr.new/dxos/dxos/@dxos/lit-ui@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-77gRbTgFxJurcK5dAtmzS8zHfaWa1RdWfe9Hs4yH99kYEa/xfpaoYw40QXaPe7BFW88th6egrZPkweAf8lWpWQ==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/lit-ui@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/lit-ui@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/lock-file@https://pkg.pr.new/dxos/dxos/@dxos/lock-file@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-lnb/czR4JLKnbfyCGIsu/DB82fgItxpEItcqie8toEtQd55hmFHUCIKPW7gM/KgUbkkm6R5L2JGNqU/B2jJIrA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/lock-file@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/lock-file@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/log@https://pkg.pr.new/dxos/dxos/@dxos/log@45a4dd2':
@@ -732,34 +735,34 @@ packages:
     version: 0.8.3
 
   '@dxos/log@https://pkg.pr.new/dxos/dxos/@dxos/log@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-Tm+WBfu1+5NLL7E2BhE/wvltjGL7AkJgF1lshtZ7ANLZfjXxHub3Id0LX67KsGUJhnvkdAVdwFPfiOPvsjehyA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/log@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/log@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/mcp-client@https://pkg.pr.new/dxos/dxos/@dxos/mcp-client@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-JsUYUOqyB7vHsAY4BQhkcaDJs5DL1SyOu/i11qVcVhPAz/mC+4iVSOg3fRrAxw4EGdPIP0nysJkc4YysIQgRSQ==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/mcp-client@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/mcp-client@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/messaging@https://pkg.pr.new/dxos/dxos/@dxos/messaging@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-fLetNzNvCRwbSLLtB7v8fmGHeM701/kPttbmLdt2ZGxIrzreweLYWg4DKCMMYMNgzd9viezcBGkW/R5lnu13ag==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/messaging@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/messaging@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/migrations@https://pkg.pr.new/dxos/dxos/@dxos/migrations@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-2tMiGLl8VxG2f/rka2Wk6dgPKEoDmh04zL84WU8j+k78lGWJ6hRrOX3rEOgBJ/7iKTDVWhDrspSNcvWumyIZnA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/migrations@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/migrations@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/network-manager@https://pkg.pr.new/dxos/dxos/@dxos/network-manager@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-v+IkSUKdOpsD7n34A1IeWOtWOwwFhkGMy6gn+ZjMYxu/CKaotrY/hhV2/CMToY21cIj/RmVZYx+df8/x8c+h1A==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/network-manager@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/network-manager@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/node-std@0.8.3':
     resolution: {integrity: sha512-aR4HR7nd7/xbvl//3XKxUTXtAPywHrW/n0UI1vuutKodRNgmmnnz+doNkCkUQlkVPe6zf/ITAtty9JJdqjQIEA==}
 
   '@dxos/node-std@https://pkg.pr.new/dxos/dxos/@dxos/node-std@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-M/kk6HQklxXtzIdvDPsibQvYXYAXylbd4hJ+8Yje10YJuNEHwOhEuyINu0rLSDlkqYwoLDtDcOQ9rvssXpXzuw==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/node-std@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/node-std@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/observability@https://pkg.pr.new/dxos/dxos/@dxos/observability@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-F34fRSe7RvUzEnZkqGoWzMQ8Hq5Gz7jMBfFTqUTnCm1sJRRIskj8TJ91lm8FKmjqhTRMlsiiv1zLGu2A0H/xAQ==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/observability@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/observability@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@effect/platform': 0.94.4
@@ -772,13 +775,13 @@ packages:
       effect: 3.20.0
 
   '@dxos/operation@https://pkg.pr.new/dxos/dxos/@dxos/operation@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-o7QF3WyF1dOc+1t6kkQyIUE966jvSmYfkl+wPrRDgUqrAv/D/zifM4cn6VPud7VxlfhqAE8xlGbrxSqHBBkHtw==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/operation@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/operation@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       effect: 3.20.0
 
   '@dxos/plugin-attention@https://pkg.pr.new/dxos/dxos/@dxos/plugin-attention@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-+jbe+6HzmAuiNDSF9xzkVf+K+FwyvZRrS6oQKb9V+62n3zykAH6lX/1f7VY443RuIzho36ls3fc/ZGnLLdtDgA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-attention@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-attention@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       effect: 3.20.0
@@ -786,7 +789,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/plugin-client@https://pkg.pr.new/dxos/dxos/@dxos/plugin-client@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-V5HR3r8r+UGQ/ggnFiAZGCL0sdXlBTDiFclBi4JOMLRYolznx2XCddOyrL1YeZKffml/opdMF2eeG0WZvA5EIA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-client@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-client@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -798,7 +801,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/plugin-deck@https://pkg.pr.new/dxos/dxos/@dxos/plugin-deck@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-m0Qz7Gx5np9FTrzSE21KLsKeycayYObgF9KZMqVW27BFA3YjN86hTPbAuNBbG8spxPwMaiYJ8b8oSH/zonptEw==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-deck@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-deck@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -810,7 +813,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/plugin-graph@https://pkg.pr.new/dxos/dxos/@dxos/plugin-graph@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-O6STN2ZI8mVjdhwLuq03MV3H/Q4Rj67rsueIn5TWQnRHlqv/4n6YGF5pwU78HJEplwI2uaZCgva4KlhrmjnG1g==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-graph@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-graph@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@effect-atom/atom-react': ^0.5.0
@@ -820,7 +823,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/plugin-markdown@https://pkg.pr.new/dxos/dxos/@dxos/plugin-markdown@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-TbeBpx5pPqqsc/O53v2L7Uxo3ujHxyqlIU1dq9nNjwXCd6HTwCeg3KLET1cJ0ambSTD0dg9EXjeR1Xbh7y0hWg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-markdown@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-markdown@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -832,7 +835,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/plugin-observability@https://pkg.pr.new/dxos/dxos/@dxos/plugin-observability@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-nGXG3qIOUmknLn4Pq6tKbqfREKBOI5hDud8hWKE5A1qH7XE3xFls/A06IltD3Wv2VKMVGQU7CIWMHlFv/VM12Q==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-observability@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-observability@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -844,7 +847,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/plugin-preview@https://pkg.pr.new/dxos/dxos/@dxos/plugin-preview@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-dvL8pGvAf/DuyZXGcANeYF8gJ0HTCtmIjgNhE0ZKvt6FAnQg+J7OSBnhEOo32L4Y8eH/dNnI74b6pz2v+E0z5A==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-preview@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-preview@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       effect: 3.20.0
@@ -852,7 +855,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/plugin-settings@https://pkg.pr.new/dxos/dxos/@dxos/plugin-settings@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-E1alFIUvmLLA+uGEpRUBx+A2OtNa+JCSSbEscxGUv1zCYrxrmfdtJb/QJ2CiZvZ+AEfPjsNsIRz3zgJgZRRPoQ==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-settings@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-settings@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       effect: 3.20.0
@@ -881,7 +884,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/plugin-space@https://pkg.pr.new/dxos/dxos/@dxos/plugin-space@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-JBSIj3Y4LPGUeAiYZ15kGahYdV56h7iwG9+pZdKO022t96nQwNn4K5mabXnh4gfzMx9S0QT9p0b5hcS3T8+tWA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-space@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-space@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -893,7 +896,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/plugin-stack@https://pkg.pr.new/dxos/dxos/@dxos/plugin-stack@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-904nsIz1ZqFa8M4pFiK65m31xNXlZks3+AuWmufGO69mXHfnvFDis90Fi+ImNq0B3h2IvgCIdcKO2DvOn/J0yA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-stack@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-stack@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -904,7 +907,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/plugin-status-bar@https://pkg.pr.new/dxos/dxos/@dxos/plugin-status-bar@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-MOnPS0cBMJ6bQv5CpT1e0AIneLLVVRp5RKL78GCoEQQdtBXlS7uG/5ecHwzLkLkMHTDSWyxAB/0HkOsAVXSgjQ==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-status-bar@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-status-bar@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -914,7 +917,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/plugin-theme@https://pkg.pr.new/dxos/dxos/@dxos/plugin-theme@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-dXr/Nn3Hb/euD4sRCRmpC/4NQxWwErsPatwjdxInbhzAfU3QMFD/HCqXlTcusp+5Y2uPfLbNgKJm0mhWfL3GNg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-theme@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-theme@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -924,7 +927,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/plugin-thread@https://pkg.pr.new/dxos/dxos/@dxos/plugin-thread@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-YvBCHxi5SozjzfVuPP5Va9oXSsItIDNlZ0zZuZsNWkPFChOBsL1f0B/d0LwTbSuiOywllOP7ED+r0RNZOzjmLg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-thread@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/plugin-thread@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -936,20 +939,20 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/protocols@https://pkg.pr.new/dxos/dxos/@dxos/protocols@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-SX2VR2lrNttVLP5r+NaNRbkPKiYBPS4MrEnRTjN4ECwfdoTS+h/EK9tMw4aIYE3bBbiHpFMEOb68yZnPgXgBdA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/protocols@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/protocols@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       effect: 3.20.0
 
   '@dxos/random-access-storage@https://pkg.pr.new/dxos/dxos/@dxos/random-access-storage@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-ReHj04dynI18AKwfrLMi2nnc5lnhKo7SESrRGj2NgQ1Dc1DGWU7DwisDuhZ45N3PAJis1K5CFJGZZjxeUhk9Qw==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/random-access-storage@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/random-access-storage@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/random@0.8.3':
     resolution: {integrity: sha512-xMu05+jkzrGjS3k24Z4fO/Kz58y7+erFXqF8nqv45fqgbAjAz0t9g9ElrXxKBOKE04RUuqwhGubSSctRjLmeqg==}
 
   '@dxos/random@https://pkg.pr.new/dxos/dxos/@dxos/random@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-zJ8ts/2MeyiAPdsaYe3nx9RmuWVxl6wK0c3rBHKqXG5/egOHUoJZ5XJboHTjIWfV5iu0naDfP6Osfw+BmjMMGg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/random@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/random@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/react-client@https://pkg.pr.new/dxos/dxos/@dxos/react-client@45a4dd2':
@@ -960,14 +963,14 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/react-client@https://pkg.pr.new/dxos/dxos/@dxos/react-client@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-27WzUIrNM1JcWmfFy8SaHwjhVfbW+9btEnng2JP+PiZHrr2rjYKVs+LYqfpEDn58FzG1W9fK3nDKEVfSoBqNeA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-client@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-client@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       react: ~19.2.3
       react-dom: ~19.2.3
 
   '@dxos/react-edge-client@https://pkg.pr.new/dxos/dxos/@dxos/react-edge-client@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-SaKCcPD0G6NnymAhe8NBech6LpliIxnfE3Y2EI4Dudm2qspOsp2xAWuGQszwlXngcNRP1EkBAtNmndJAl8D7Hg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-edge-client@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-edge-client@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       effect: 3.20.0
@@ -975,35 +978,35 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/react-error-boundary@https://pkg.pr.new/dxos/dxos/@dxos/react-error-boundary@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-xeMYDHlhnwMRYTGPyo46FEHVdBGLRSDWtVixtUQUIhO/3uhK/hNM9FooqgkCKJ8rCiLyEbG3qQD8QGn3N39i8Q==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-error-boundary@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-error-boundary@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       react: ~19.2.3
       react-dom: ~19.2.3
 
   '@dxos/react-hooks@https://pkg.pr.new/dxos/dxos/@dxos/react-hooks@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-b24/pnvG/rQlFjqBM20iNHv2KqSVBNcar5MkGKJi174crBFYtH8FZ7tLM67zS9s+ie7ywXb8NBUhUc4RzoUWYw==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-hooks@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-hooks@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       react: ~19.2.3
       react-dom: ~19.2.3
 
   '@dxos/react-input@https://pkg.pr.new/dxos/dxos/@dxos/react-input@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-1yFar2LReyvTz9qHEIJYnNLUZNmVSYmIA32bvz8yN5xzxI/ykTKEuEgkeH/96h/1kFJXIRHnBuBuAUa0TkRp6w==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-input@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-input@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       react: ~19.2.3
       react-dom: ~19.2.3
 
   '@dxos/react-list@https://pkg.pr.new/dxos/dxos/@dxos/react-list@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-84PQJ80LdEMTX8PLXss9tc1a5YDUA/pWmNnkLq5u/5ZzIxEE4Juxg4ZjEDhRoXQgoKt00zCRpz53lkIgliEAHA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-list@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-list@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       react: ~19.2.3
       react-dom: ~19.2.3
 
   '@dxos/react-ui-attention@https://pkg.pr.new/dxos/dxos/@dxos/react-ui-attention@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-59OoTQ6+kCsLgpGOB4cnc7eSLy5zm+sECCU5vA/ZKOxXE6/lwFJU5egC1Ydi2Nx0UHhZHJFJF8KAc0JQRe80bg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-attention@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-attention@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -1013,7 +1016,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/react-ui-components@https://pkg.pr.new/dxos/dxos/@dxos/react-ui-components@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-g2MW13j/ELXeBE2IH2MS+K+Uo+dv7FsT/q7AKHAYh0ZwZcwkDwR8RVAFjhdocHLHV8HfX1DktVmjCL6Xd00m8Q==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-components@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-components@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -1023,7 +1026,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/react-ui-dnd@https://pkg.pr.new/dxos/dxos/@dxos/react-ui-dnd@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-7gZTuAoal0LdsVU/77+cIE9Crt3GKEo8OqzHcIoHia/UJ+yXlxzGQJMYfPNjpn+VnsVNgBVuneTTyjZ1ZUFW1g==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-dnd@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-dnd@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -1032,7 +1035,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/react-ui-editor@https://pkg.pr.new/dxos/dxos/@dxos/react-ui-editor@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-U7s3DnYqVmUKq/2YDxVRkTkquM3BfICISzUD7pGoTXOTbOVW5EW1+3CloKlXJSmTwdWAYWkLcm7ykbHyQVb8Sw==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-editor@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-editor@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-client': 0.8.3
@@ -1055,7 +1058,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/react-ui-form@https://pkg.pr.new/dxos/dxos/@dxos/react-ui-form@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-5xDF8wJMD0aUl9FZQ5p+5Sr7RmQ3iszLnGtW6ZfRMXNNo92PKuTiDpkR5/1blc7PkIUsROxfILGLxfhDSh3R6A==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-form@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-form@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -1065,7 +1068,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/react-ui-graph@https://pkg.pr.new/dxos/dxos/@dxos/react-ui-graph@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-ZZZJXh8KGtJTFU7RxC/vzNiCZ/ZSBZZvHR6di2i6FxYY8N0PXEtB38c6PD840J/luwRR8AtpbUeOk/WMr3iusw==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-graph@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-graph@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -1074,7 +1077,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/react-ui-grid@https://pkg.pr.new/dxos/dxos/@dxos/react-ui-grid@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-yntfZKQyeh94sZQB5PMvN/fUc+LVIjQIcOpjP8mIaisA3TXbIjDIMPCU0PjJnjWn2iDX2lx+2ozUcVMg4Y+/9Q==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-grid@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-grid@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -1083,7 +1086,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/react-ui-list@https://pkg.pr.new/dxos/dxos/@dxos/react-ui-list@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-pyTttCdPBzZeUI6+HZ/UgQ3sPVBkICSvO0uh4CMvlHcWmZlu7Mzui30ZBngSoMW159Lao89l3RDJ9mrHN+6foQ==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-list@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-list@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -1093,7 +1096,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/react-ui-masonry@https://pkg.pr.new/dxos/dxos/@dxos/react-ui-masonry@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-kFSj6PsDuXciSF3NSNxkrMjWMfugj4DIv1DMP09NIvJm1C+Wx16s34UMu7IHmXha9DXeOB+S5zyQR55xmeDjug==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-masonry@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-masonry@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/random': 0.8.3
@@ -1104,7 +1107,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/react-ui-menu@https://pkg.pr.new/dxos/dxos/@dxos/react-ui-menu@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-3xpU03bZmncvKltbU12jVYypAe+Tf1Q0YUt/dN4FXazSgxzntKo1iSHP5wWhST/12K3oQmVuMgfB1hKibh6LSA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-menu@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-menu@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -1116,7 +1119,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/react-ui-mosaic@https://pkg.pr.new/dxos/dxos/@dxos/react-ui-mosaic@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-mCv0zynZG9WkK0/YkVaZah9MZdv9/TT3/C//3PluFDdbfHGiasSujEXASdDLvTYY2s/Z0LQCBKyM+vNk3u5MMA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-mosaic@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-mosaic@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/random': 0.8.3
@@ -1128,7 +1131,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/react-ui-pickers@https://pkg.pr.new/dxos/dxos/@dxos/react-ui-pickers@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-3cun31AMTPkEBAM2pIzVofTKceqXlR2zPvhFgQhhEAL5ItAWTXNctG5CdMzJnjGeGW+Qa/CBIn45w78QFTB1kw==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-pickers@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-pickers@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -1137,7 +1140,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/react-ui-search@https://pkg.pr.new/dxos/dxos/@dxos/react-ui-search@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-6Iv2tYaXhh1V3FVvPQWT0lUqQJIrSveBb0Y5VC0hMGSnjYaM3cUxMa2MTq1SuqOCak3gCbWiYX/HX+uXSbD1Lg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-search@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-search@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -1146,7 +1149,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/react-ui-sfx@https://pkg.pr.new/dxos/dxos/@dxos/react-ui-sfx@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-m7vAf3rdjKEsICTkXZ1UlVB6VcfeDXjYgzc3bDKbEezK+K/WE9ccUORR5jTgXIhbZhSH7tM4wf6m1JaeBBqn/A==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-sfx@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-sfx@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -1166,7 +1169,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/react-ui-stack@https://pkg.pr.new/dxos/dxos/@dxos/react-ui-stack@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-NtZld7kJ/GFX2N4r+AfHfyXqWBqspm9zhH9OgO2hs8HqT/rJjIZY4XfBxQhUQEhxvXW2/EkC2isdUWHWegJcBw==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-stack@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-stack@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/client': 0.8.3
@@ -1177,7 +1180,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/react-ui-syntax-highlighter@https://pkg.pr.new/dxos/dxos/@dxos/react-ui-syntax-highlighter@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-inmcZwZFQUJWiLDwyYLr+4/jjbbTnNfyu0KVehFzVkNO1KIhACbabZr0cBLRW7kb67untZV1HrW52BqAQY/rJg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-syntax-highlighter@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-syntax-highlighter@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -1186,7 +1189,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/react-ui-table@https://pkg.pr.new/dxos/dxos/@dxos/react-ui-table@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-0KlGv/WA+K+4VFYyS4cqaHFgvTMp5qFTmju4G3xtvl0kxVDPZT7Z/dfFo81i9w3NFhekpDzWEWJbwIwNYZNyRQ==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-table@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-table@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -1198,7 +1201,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/react-ui-tabs@https://pkg.pr.new/dxos/dxos/@dxos/react-ui-tabs@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-1raDUPPCIGbc3E6jlVrVkEFPsj966f/QjQDSuXjvn0BSlgIWefeOQ7RoMs8K/tuwj13F9HUj0RAufrFWYhscgg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-tabs@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-tabs@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -1207,7 +1210,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/react-ui-text-tooltip@https://pkg.pr.new/dxos/dxos/@dxos/react-ui-text-tooltip@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-CZkVCvg9S8MRKkB6g2DEq9Mun7zDdnSYHZgQwdopSVZ7CKVElhxuOS59/+xbJ/5WmK5BnrPobqyserHZ2Ru7LQ==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-text-tooltip@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-text-tooltip@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -1216,7 +1219,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/react-ui-thread@https://pkg.pr.new/dxos/dxos/@dxos/react-ui-thread@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-2kRFshplbTF9Y7N3dajbMGPg7t7GNEsAQ+AuYFdZ7d13VJq5eFpaGDP30YoB5g4LIYTYIUoSXyhCHv54axyRZg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-thread@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui-thread@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-ui': 0.8.3
@@ -1233,7 +1236,7 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/react-ui@https://pkg.pr.new/dxos/dxos/@dxos/react-ui@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-bdaJDSVINCL8oFs/4MzAgSfyNk4FZGY8UAgq9CVcTQeoltdp7kDfCEjPYlF3TMXzGfqkiwDrrJo/Sh1i8qtY7g==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/react-ui@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/ui-theme': 0.8.3
@@ -1241,21 +1244,21 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/rpc-tunnel@https://pkg.pr.new/dxos/dxos/@dxos/rpc-tunnel@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-YoCuNhUR2pYYpe40x9xnZaHpXOyPXR9L20sEi2AqVZ4YYBkZXiPC7QvfmRjmEWkrF8I19oxN4PdPqEAYhJ37HA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/rpc-tunnel@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/rpc-tunnel@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/rpc@https://pkg.pr.new/dxos/dxos/@dxos/rpc@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-fN1l8cmpeu99VfC6dkCoIx+acaCam7H4hP3H+dFiIaxv+aG2GFTUPf2F4i8ui1o03jk/3ySzWzwpEK/qAe6DMQ==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/rpc@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/rpc@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/schema@https://pkg.pr.new/dxos/dxos/@dxos/schema@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-rMxwycpFJjWcryF47fVAnJg6zQh6/N6LkUHa6MuLre4RVyWIDErL6gJ6wkmKbTl2zbsYRkyHQGRD4e5x5auETQ==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/schema@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/schema@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       effect: 3.20.0
 
   '@dxos/shell@https://pkg.pr.new/dxos/dxos/@dxos/shell@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-HyW0D9+Oqdh8HlQx+sTuOxucd/5Kr9OnxG9tZwYLRw4ehrRC0J26tpx0y7a0xKnoKVOaRYsTRySFiSfGYDk3oA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/shell@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/shell@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/react-client': 0.8.3
@@ -1263,49 +1266,49 @@ packages:
       react-dom: ~19.2.3
 
   '@dxos/sql-sqlite@https://pkg.pr.new/dxos/dxos/@dxos/sql-sqlite@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-JPEQtgV+XZ3nxnRrE7SZBTg1h36uvWxyqDFnHBvS4gJT30qhRCi5EdCYLFajE6oPr2sB6nKdlqzXbzNDcNMqKw==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/sql-sqlite@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/sql-sqlite@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/teleport-extension-automerge-replicator@https://pkg.pr.new/dxos/dxos/@dxos/teleport-extension-automerge-replicator@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-euTOMZnZPp1dzWZBl0p4bfg/ZZCrRW6vn8MxOV9GaGESFJSt9jwSXHv5hbNk4n0sZiVKZaJCr8gRFQg2F7bMug==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/teleport-extension-automerge-replicator@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/teleport-extension-automerge-replicator@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/teleport-extension-gossip@https://pkg.pr.new/dxos/dxos/@dxos/teleport-extension-gossip@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-pG2EMwDNl3FeLLbj0N0wIoTT4vSaxuM7l2DdPeOthc1Vvg1nUkThJd+iYg0PgvDCUWJMZO5Sy+nFT4SmHX56SQ==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/teleport-extension-gossip@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/teleport-extension-gossip@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/teleport-extension-object-sync@https://pkg.pr.new/dxos/dxos/@dxos/teleport-extension-object-sync@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-79KtoM7ipno3xIqvKFiYdoyO/qAMKRUk3GcY33uBPj+29o06Ks5Tc7OZyOApf5M4hYIOo78gTNx0BOlY7Y4cqw==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/teleport-extension-object-sync@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/teleport-extension-object-sync@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/teleport-extension-replicator@https://pkg.pr.new/dxos/dxos/@dxos/teleport-extension-replicator@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-E0MMBh+ZoSAG4U9qHmV2D1C9cGcTdg80X0kL7Uj+3ukejeWunIZMmjQaxrFf2uh3kC6FGhNxYMYAdvktC40dXg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/teleport-extension-replicator@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/teleport-extension-replicator@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/teleport@https://pkg.pr.new/dxos/dxos/@dxos/teleport@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-fgPi4z69kf4TPToDxv5tuMx8z8Ydj/73vDVSEi4zwBkX9qWReGFCBfMAcIPlNqVygV2KESL6Zzm0GfBYcwp/gA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/teleport@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/teleport@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/timeframe@https://pkg.pr.new/dxos/dxos/@dxos/timeframe@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-XNVeLPW7s+Q382fJK3XZ3BCTKOZ6/40zDRoXAwYJ0zlIX8MAh2fKHdloi9d+/8vQ/CYe01l/Kbx94L7RbUrotA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/timeframe@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/timeframe@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/tracing@https://pkg.pr.new/dxos/dxos/@dxos/tracing@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-7mzTa9I5nr0cuGJeuHgfk0LoQELmBTdCZWU0ODHW3QIbYbPhihFCg2vUA0Dcr7spQ1BQe7+igfTcekrYS2V4YQ==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/tracing@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/tracing@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/types@https://pkg.pr.new/dxos/dxos/@dxos/types@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-Xw8/IUMe1RBoyAaPh+NrOEPVyWq/6kBZ2O6wSMn2uoorBbhmmEF/Lo6Hrq1JGJNrsERSOWnc8WVbHQQC9EUNGg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/types@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/types@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       effect: 3.20.0
 
   '@dxos/typings@https://pkg.pr.new/dxos/dxos/@dxos/typings@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-6jMydS8WLiVn1jy4lBBeOqRvF9iQbhI8Z2kMqGHACcISTnoDTxPEP7q24sxm0uWdD6jjrMCUm4WCoJ29mdOwyA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/typings@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/typings@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/ui-editor@https://pkg.pr.new/dxos/dxos/@dxos/ui-editor@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-yY6UaIRZBkaGaPEFePfWFY3Aqe4yRmnzEBS3DIY6LVwrp/C9oXsrO8k/c+e49STw0Dy9a2ERb0t0kqDCe4FlUg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/ui-editor@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/ui-editor@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       '@dxos/ui-theme': 0.8.3
@@ -1319,17 +1322,17 @@ packages:
       react: ~19.2.3
 
   '@dxos/ui-theme@https://pkg.pr.new/dxos/dxos/@dxos/ui-theme@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-TiGSykehEzz9zTfjFvZIY0YLkk4GJMfXAjrrkIefWnbdsXPkJI7RfBPN/je/hGzsrAZ4tmk3hQF+SCEkIubQkg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/ui-theme@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/ui-theme@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       react: ~19.2.3
 
   '@dxos/ui-types@https://pkg.pr.new/dxos/dxos/@dxos/ui-types@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-J7SBwrLgWV1J0toV22bKFJV0XbiyIehHY+foAtZV4iI2DszRComjoygsP3tnQ0rFR1DN3n+j/x52JKX54egweg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/ui-types@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/ui-types@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/ui@https://pkg.pr.new/dxos/dxos/@dxos/ui@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-SSkplN6MpKtocJQdt1JTtUly9j8pXjxFG2WrbzIFuvL6MfGcLiXzo5qzkGXmEPsDXUV9le6+zGtV08g4Q5gmfw==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/ui@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/ui@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/util@0.8.3':
@@ -1340,32 +1343,32 @@ packages:
     version: 0.8.3
 
   '@dxos/util@https://pkg.pr.new/dxos/dxos/@dxos/util@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-WVhLjYvccs7uvDAuU7U86snIo68iwGQFgT2njfus6hhdqpd7fQSdOcwY8zsXEbdTZorD1wktEk3MipICNxIG9w==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/util@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/util@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/vendor-hypercore@https://pkg.pr.new/dxos/dxos/@dxos/vendor-hypercore@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-sNkwTTtB6HXatyw0rexSn6WkQpFWgowdEutnWJDNDPwFYP4A0/PkO9GREiUT8nQ8m5v3Nag3dGfr/jP8R6VGHg==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/vendor-hypercore@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/vendor-hypercore@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/vendor-quickjs@https://pkg.pr.new/dxos/dxos/@dxos/vendor-quickjs@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-LEGYBkjrH64C8h6Lv9Lz+ev8l4FE3A7FIyzhBhOciwfaaJx/G/zUlVbTVSEJpi+8d5RhjhD6yRAax+/4/6vA4Q==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/vendor-quickjs@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/vendor-quickjs@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/wa-sqlite@0.2.1':
     resolution: {integrity: sha512-RVktTCzwJ1ix1MP/LWDjpO1HOOP0JpnAtjB/Zp/csbrlBEhhYYpwIlgDJzCi1Ri4cWHOo04iy+YtlnjfshM1Zw==}
 
   '@dxos/web-context-react@https://pkg.pr.new/dxos/dxos/@dxos/web-context-react@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-4tGVYGuR9khmYxOrPLk6U4ow+bjPiZPCAo03id5pcdVGbat/DG2W3OghSQhoxN0XU0X/fv5Ilw5F7LL1mwX0WA==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/web-context-react@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/web-context-react@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
     peerDependencies:
       react: ~19.2.3
 
   '@dxos/web-context@https://pkg.pr.new/dxos/dxos/@dxos/web-context@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-97lIMvL28z8DW16TjEsuMuSobxdaBqS36BjmLG92DIufNfOZvCIu+fVwF6DqQ1Bu2trCcFfLzuZI221s5pCrFQ==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/web-context@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/web-context@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@dxos/websocket-rpc@https://pkg.pr.new/dxos/dxos/@dxos/websocket-rpc@45a4dd213bea0d40f6e75a3b680ab85a3118e434':
-    resolution: {integrity: sha512-ZUxqUVkZsyvFlq0NKCAGfqA41EHDKNYJUwrAn18N5LR5yExOanI8/k3QPXk2AI9+ZS8c6Ajcb/MykE6HHx+x6A==, tarball: https://pkg.pr.new/dxos/dxos/@dxos/websocket-rpc@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
+    resolution: {tarball: https://pkg.pr.new/dxos/dxos/@dxos/websocket-rpc@45a4dd213bea0d40f6e75a3b680ab85a3118e434}
     version: 0.8.3
 
   '@effect-atom/atom-react@0.5.0':
@@ -3659,8 +3662,8 @@ packages:
   '@radix-ui/react-use-size@1.1.0':
     resolution: {integrity: sha512-XW3/vWuIXHa+2Uwcc2ABSfcCledmXhhQPlGbfcRXbiUQI5Icjcg19BGCZVKKInYbvUCut/ufbbLLPFC5cbb1hw==}
     peerDependencies:
-      '@types/react': ~19.2.7
-      react: ~19.2.3
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -7951,6 +7954,11 @@ packages:
   vary@1.1.2:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
+
+  vite-plugin-css-injected-by-js@5.0.1:
+    resolution: {integrity: sha512-JSB0jjN4VCKqG7XTUdrwiIl5gA+z2yi/tAl9WHo0X4sdyJ1yrmbLOEjf95TDoDIIuKr4GJIc7lMJG0CT88eEUQ==}
+    peerDependencies:
+      vite: '>8.0.0-0'
 
   vite-plugin-wasm@3.6.0:
     resolution: {integrity: sha512-mL/QPziiIA4RAA6DkaZZzOstdwbW5jO4Vz7Zenj0wieKWBlNvIvX5L5ljum9lcUX0ShNfBgCNLKTjNkRVVqcsw==}
@@ -25033,6 +25041,10 @@ snapshots:
   v8n@1.5.1: {}
 
   vary@1.1.2: {}
+
+  vite-plugin-css-injected-by-js@5.0.1(vite@8.0.9(@types/node@25.6.0)(jiti@2.6.1)(sass@1.99.0)(yaml@2.8.3)):
+    dependencies:
+      vite: 8.0.9(@types/node@25.6.0)(jiti@2.6.1)(sass@1.99.0)(yaml@2.8.3)
 
   vite-plugin-wasm@3.6.0(vite@8.0.9(@types/node@25.6.0)(jiti@2.6.1)(sass@1.99.0)(yaml@2.8.3)):
     dependencies:
