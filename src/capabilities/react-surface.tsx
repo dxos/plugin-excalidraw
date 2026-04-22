@@ -31,7 +31,7 @@ export default Capability.makeModule(() =>
       }),
       Surface.create({
         id: 'plugin-settings',
-        filter: AppSurface.settings(AppSurface.Article, meta.id),
+        filter: AppSurface.settingsArticle(meta.id),
         component: ({ data: { subject } }) => {
           const { settings, updateSettings } = useSettingsState<Settings.Settings>(subject.atom);
           return <SketchSettings settings={settings} onSettingsChange={updateSettings} />;

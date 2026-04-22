@@ -32,8 +32,37 @@ const emitManifest = (): VitePlugin => ({
   },
 });
 
+/**
+ * The host Composer's import map only covers JS entrypoints — asset-style imports
+ * (CSS, PCSS, etc.) from shared `@dxos/*` packages leak out as bare specifiers the
+ * browser can't resolve (e.g. `@dxos/lit-ui/dx-tag-picker.pcss`).
+ *
+ * Those stylesheets are already loaded by the host bundle (Composer itself imports
+ * `@dxos/react-ui-form` etc.), so every occurrence in a plugin is a redundant
+ * side-effect import. Redirect each to a no-op virtual module so the bundle still
+ * type-checks and executes but doesn't try to fetch a non-existent asset.
+ */
+const ASSET_EXTENSION = /\.(css|pcss|scss|sass|less|svg|png|jpe?g|gif|webp)$/;
+const VIRTUAL_EMPTY_PREFIX = '\0excalidraw-empty:';
+const dropSharedAssets = (): VitePlugin => ({
+  name: 'excalidraw:drop-shared-assets',
+  enforce: 'pre',
+  resolveId(id) {
+    if (ASSET_EXTENSION.test(id) && id.startsWith('@')) {
+      return { id: VIRTUAL_EMPTY_PREFIX + id, external: false, moduleSideEffects: false };
+    }
+    return null;
+  },
+  load(id) {
+    if (id.startsWith(VIRTUAL_EMPTY_PREFIX)) {
+      return 'export {};';
+    }
+    return null;
+  },
+});
+
 export default defineConfig({
-  plugins: [wasm(), ...composerPlugin({ entry: 'src/plugin.tsx' }), react(), emitManifest()],
+  plugins: [dropSharedAssets(), wasm(), ...composerPlugin({ entry: 'src/plugin.tsx' }), react(), emitManifest()],
   build: {
     // Required so top-level-await in transitively-bundled WASM modules (automerge, tiktoken)
     // compiles without an explicit polyfill.
@@ -48,8 +77,7 @@ export default defineConfig({
     assetsInlineLimit: () => true,
     rollupOptions: {
       // Transitive WASM deps (tiktoken via @anthropic-ai/tokenizer, etc.) have no business
-      // in a UI plugin bundle and break with `inlineDynamicImports + top-level await`. Mark
-      // them external so rolldown doesn't try to bundle them at all.
+      // in a UI plugin bundle and break with `inlineDynamicImports + top-level await`.
       external: [/^tiktoken(\/|$)/, /^@anthropic-ai\/tokenizer(\/|$)/],
       output: {
         // Produce a single plugin.mjs for GitHub Release distribution.
