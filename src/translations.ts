@@ -2,15 +2,15 @@
 // Copyright 2023 DXOS.org
 //
 
-import { Sketch } from '@dxos/plugin-sketch/types';
 import { type Resource } from '@dxos/react-ui';
 
 import { meta } from '#meta';
+import { Excalidraw } from '#types';
 
 export const translations = [
   {
     'en-US': {
-      [Sketch.Sketch.typename]: {
+      [Excalidraw.Excalidraw.typename]: {
         'typename.label': 'Excalidraw',
         'typename.label_zero': 'Excalidraws',
         'typename.label_one': 'Excalidraw',

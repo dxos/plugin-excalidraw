@@ -9,25 +9,25 @@ import { Plugin } from '@dxos/app-framework';
 import { AppPlugin } from '@dxos/app-toolkit';
 import { Annotation } from '@dxos/echo';
 import { Operation } from '@dxos/operation';
-import { Sketch } from '@dxos/plugin-sketch/types';
 import { SpaceOperation } from '@dxos/plugin-space/operations';
 import { type CreateObject } from '@dxos/plugin-space/types';
 
 import { ExcalidrawSettings, OperationHandler, ReactSurface } from '#capabilities';
 import { meta } from '#meta';
+import { Excalidraw } from '#types';
 
 import { translations } from './translations';
 
 export const ExcalidrawPlugin = Plugin.define(meta).pipe(
   AppPlugin.addMetadataModule({
     metadata: {
-      id: Sketch.Sketch.typename,
+      id: Excalidraw.Excalidraw.typename,
       metadata: {
-        icon: Annotation.IconAnnotation.get(Sketch.Sketch).pipe(Option.getOrThrow).icon,
-        iconHue: Annotation.IconAnnotation.get(Sketch.Sketch).pipe(Option.getOrThrow).hue ?? 'white',
+        icon: Annotation.IconAnnotation.get(Excalidraw.Excalidraw).pipe(Option.getOrThrow).icon,
+        iconHue: Annotation.IconAnnotation.get(Excalidraw.Excalidraw).pipe(Option.getOrThrow).hue ?? 'white',
         createObject: ((props, options) =>
           Effect.gen(function* () {
-            const object = Sketch.make(props);
+            const object = Excalidraw.make(props);
             return yield* Operation.invoke(SpaceOperation.AddObject, {
               object,
               target: options.target,
@@ -39,7 +39,7 @@ export const ExcalidrawPlugin = Plugin.define(meta).pipe(
     },
   }),
   AppPlugin.addOperationHandlerModule({ activate: OperationHandler }),
-  AppPlugin.addSchemaModule({ schema: [Sketch.Canvas, Sketch.Sketch] }),
+  AppPlugin.addSchemaModule({ schema: [Excalidraw.Canvas, Excalidraw.Excalidraw] }),
   AppPlugin.addSettingsModule({ id: 'settings', activate: ExcalidrawSettings }),
   AppPlugin.addSurfaceModule({ activate: ReactSurface }),
   AppPlugin.addTranslationsModule({ translations }),

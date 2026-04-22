@@ -5,8 +5,9 @@
 import { type ExcalidrawElement } from '@excalidraw/excalidraw/element/types';
 
 import { log } from '@dxos/log';
-import { AbstractAutomergeStoreAdapter, type Batch } from '@dxos/plugin-sketch/sdk';
 import { isNonNullable } from '@dxos/util';
+
+import { AbstractAutomergeStoreAdapter, type Batch } from '../util';
 
 export type ExcalidrawStoreAdapterProps = {
   onUpdate?: (update: { elements: ExcalidrawElement[] }) => void;

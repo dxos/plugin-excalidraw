@@ -7,13 +7,11 @@ import { useEffect, useState } from 'react';
 import { createDocAccessor } from '@dxos/echo-db';
 import { invariant } from '@dxos/invariant';
 import { log } from '@dxos/log';
-import { type Sketch } from '@dxos/plugin-sketch/types';
-
-import { EXCALIDRAW_SCHEMA } from '#types';
+import { EXCALIDRAW_SCHEMA, type Excalidraw } from '#types';
 
 import { ExcalidrawStoreAdapter, type ExcalidrawStoreAdapterProps } from './adapter';
 
-export const useStoreAdapter = (object?: Sketch.Sketch, options: ExcalidrawStoreAdapterProps = {}) => {
+export const useStoreAdapter = (object?: Excalidraw.Excalidraw, options: ExcalidrawStoreAdapterProps = {}) => {
   const [adapter] = useState(new ExcalidrawStoreAdapter(options));
   const [_, forceUpdate] = useState({});
   useEffect(() => {

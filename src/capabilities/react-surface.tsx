@@ -8,12 +8,11 @@ import React from 'react';
 import { Capabilities, Capability } from '@dxos/app-framework';
 import { Surface, useAtomCapability, useSettingsState } from '@dxos/app-framework/ui';
 import { AppSurface } from '@dxos/app-toolkit/ui';
-import { Sketch } from '@dxos/plugin-sketch/types';
 
 import { SketchSettings } from '#components';
 import { SketchContainer } from '#containers';
 import { meta } from '#meta';
-import { EXCALIDRAW_SCHEMA, ExcalidrawCapabilities, type Settings } from '#types';
+import { Excalidraw, ExcalidrawCapabilities, type Settings } from '#types';
 
 export default Capability.makeModule(() =>
   Effect.succeed(
@@ -22,8 +21,8 @@ export default Capability.makeModule(() =>
         id: 'sketch',
         // TODO(wittjosiah): Split into multiple surfaces if this filter proves too strict for non-article roles.
         role: ['article', 'section', 'slide'],
-        filter: (data): data is { subject: Sketch.Sketch; attendableId: string } =>
-          typeof data.attendableId === 'string' && Sketch.isSketch(data.subject, EXCALIDRAW_SCHEMA),
+        filter: (data): data is { subject: Excalidraw.Excalidraw; attendableId: string } =>
+          typeof data.attendableId === 'string' && Excalidraw.isExcalidraw(data.subject),
         component: ({ data: { subject, attendableId }, role }) => {
           const settings = useAtomCapability(ExcalidrawCapabilities.Settings);
           return <SketchContainer role={role} subject={subject} attendableId={attendableId} settings={settings} />;
