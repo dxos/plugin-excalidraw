@@ -64,6 +64,11 @@ export const make = ({ canvas: canvasProps, ...props }: ExcalidrawProps = {}) =>
   return Obj.make(Excalidraw, { ...props, canvas: Ref.make(canvas) });
 };
 
-/** Runtime type guard; checks the schema tag against the default/expected value. */
+/**
+ * Runtime type guard. Uses `Obj.instanceOf` so the check is typename-aware —
+ * plugin-sketch's `Sketch` shares the structural shape (`name` + `canvas` ref)
+ * and a shape-only check would false-positive there, causing both plugins to
+ * claim the same object at the surface filter.
+ */
 export const isExcalidraw = (object: any, _schema: string = EXCALIDRAW_SCHEMA): object is Excalidraw =>
-  Schema.is(Excalidraw)(object);
+  Obj.instanceOf(Excalidraw, object);
