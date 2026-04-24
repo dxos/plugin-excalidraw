@@ -1,3 +1,5 @@
-# @dxos/plugin-sketch
+# dxos-plugin-excalidraw
 
-Surface plugin for sketch entities using Tldraw.
+Surface plugin for Excalidraw sketch entities in DXOS Composer.
+
+Standalone community distribution of the `@dxos/plugin-excalidraw` package.
