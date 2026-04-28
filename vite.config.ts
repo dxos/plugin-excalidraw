@@ -8,8 +8,13 @@ import wasm from 'vite-plugin-wasm';
 
 import { composerPlugin } from '@dxos/app-framework/vite-plugin';
 
+import { version } from './package.json' with { type: 'json' };
 import { meta } from './src/meta';
 
 export default defineConfig({
-  plugins: [wasm(), ...composerPlugin({ entry: 'src/plugin.tsx', meta }), react()],
+  plugins: [
+    wasm(),
+    ...composerPlugin({ entry: 'src/plugin.tsx', meta: { ...meta, version } }),
+    react(),
+  ],
 });

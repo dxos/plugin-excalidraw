@@ -21,7 +21,7 @@
   "//": "@dxos/* deps track the `main` dist-tag on npm so the plugin runs against the same Composer host code that edge-main serves. Bump SHAs in lockstep when landing a host-side change.",
   "dependencies": {
     "@automerge/automerge": "3.2.3",
-    "@dxos/app-framework": "0.8.4-main.fcfe5033a5",
+    "@dxos/app-framework": "https://pkg.pr.new/dxos/dxos/@dxos/app-framework@17f199c",
     "@dxos/app-toolkit": "0.8.4-main.fcfe5033a5",
     "@dxos/async": "0.8.4-main.fcfe5033a5",
     "@dxos/client": "0.8.4-main.fcfe5033a5",
