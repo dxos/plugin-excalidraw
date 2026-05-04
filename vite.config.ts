@@ -13,8 +13,8 @@ import { meta } from './src/meta';
 
 export default defineConfig({
   plugins: [
-    wasm(),
     ...composerPlugin({ entry: 'src/plugin.tsx', meta: { ...meta, version } }),
     react(),
+    wasm(),
   ],
 });
