@@ -80,6 +80,14 @@ jobs:
             cp "${src}" "dist/upload/${encoded}"
           done
 
+      # Two-step: create the release first (no assets), then upload assets
+      # serially with a small inter-request sleep. Multi-asset bundles can run
+      # to ~200+ files; passing them all to `gh release create` triggers
+      # GitHub's secondary rate limit on content-creating requests
+      # (`HTTP 403: You have exceeded a secondary rate limit`) because the gh
+      # CLI uploads in parallel. Serial + 1s sleep keeps us under the limit
+      # at a worst-case ~3.5min upload for 200 files — well below the
+      # 30min job timeout.
       - name: Create GitHub release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -87,5 +95,14 @@ jobs:
         run: |
           gh release create "${TAG}" \
             --title "${TAG}" \
-            --generate-notes \
-            dist/upload/*
+            --generate-notes
+
+      - name: Upload release assets (throttled)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ steps.bump.outputs.tag }}
+        run: |
+          for asset in dist/upload/*; do
+            gh release upload "${TAG}" "${asset}"
+            sleep 1
+          done
