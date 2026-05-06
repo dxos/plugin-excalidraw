@@ -66,14 +66,17 @@ jobs:
       # `find` enumerates every regular file under `dist/`, computes
       # `<rel-path>` (the bundle-relative path the manifest already records),
       # and copies the file to `dist/upload/<encoded>` where `<encoded>` is the
-      # path with `/` swapped for `__`. Top-level files (`manifest.json`,
-      # `index.mjs`) keep their original names — the swap is a no-op for them.
-      - name: Stage release assets with `/`→`__` path encoding
+      # path with `/` swapped for `+`. `+` was chosen because vite/rollup chunk
+      # hashes are restricted to `[A-Za-z0-9_-]`, so the swap can't collide with
+      # a real chunk filename and round-trip cleanly through the registry's
+      # `decodeAssetName`. Top-level files (`manifest.json`, `index.mjs`) keep
+      # their original names — the swap is a no-op for them.
+      - name: Stage release assets with `/`→`+` path encoding
         run: |
           mkdir -p dist/upload
           find dist -type f -not -path 'dist/upload/*' | while read -r src; do
             rel="${src#dist/}"
-            encoded="${rel//\//__}"
+            encoded="${rel//\//+}"
             cp "${src}" "dist/upload/${encoded}"
           done
 
