@@ -57,6 +57,26 @@ jobs:
           git push origin HEAD:${GITHUB_REF_NAME}
           git push origin "${VERSION}"
 
+      # GitHub release asset names cannot contain `/`, so multi-asset bundles
+      # (`index.mjs` + sibling chunks/CSS) need their paths flattened. The
+      # registry service (`@dxos/registry-service`'s `decodeAssetName`) reverses
+      # this on hydration — the encoding is duplicated by value because the
+      # publisher has no convenient way to import from that package.
+      #
+      # `find` enumerates every regular file under `dist/`, computes
+      # `<rel-path>` (the bundle-relative path the manifest already records),
+      # and copies the file to `dist/upload/<encoded>` where `<encoded>` is the
+      # path with `/` swapped for `__`. Top-level files (`manifest.json`,
+      # `index.mjs`) keep their original names — the swap is a no-op for them.
+      - name: Stage release assets with `/`→`__` path encoding
+        run: |
+          mkdir -p dist/upload
+          find dist -type f -not -path 'dist/upload/*' | while read -r src; do
+            rel="${src#dist/}"
+            encoded="${rel//\//__}"
+            cp "${src}" "dist/upload/${encoded}"
+          done
+
       - name: Create GitHub release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -65,5 +85,4 @@ jobs:
           gh release create "${TAG}" \
             --title "${TAG}" \
             --generate-notes \
-            dist/plugin.mjs \
-            dist/manifest.json
+            dist/upload/*
