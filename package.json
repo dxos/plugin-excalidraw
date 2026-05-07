@@ -26,6 +26,7 @@
     "@dxos/async": "0.8.4-main.51f1e5ca51",
     "@dxos/client": "0.8.4-main.51f1e5ca51",
     "@dxos/client-protocol": "0.8.4-main.51f1e5ca51",
+    "@dxos/compute": "0.8.4-main.51f1e5ca51",
     "@dxos/echo": "0.8.4-main.51f1e5ca51",
     "@dxos/echo-db": "0.8.4-main.51f1e5ca51",
     "@dxos/echo-react": "0.8.4-main.51f1e5ca51",
