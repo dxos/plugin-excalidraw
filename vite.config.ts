@@ -12,15 +12,11 @@ import { version } from './package.json' with { type: 'json' };
 import { meta } from './src/meta';
 
 export default defineConfig({
-  // Resolve the `source` condition first so internal `#xxx` imports in this
-  // package's own `imports` map route to `src/*.ts` during the dev/build run.
-  // The conditional dist paths in `package.json#imports` are aspirational —
-  // they only kick in if/when this plugin is built and republished as a
-  // standalone library with `dist/lib/neutral/*.mjs` outputs. Vite's default
-  // conditions (`module, browser, development|production, import`) are
-  // restored alongside `source` because vite replaces the list rather than
-  // appending, and deps like `@excalidraw/excalidraw` rely on `import`/`browser`
-  // resolving their CSS/wasm subpath exports.
+  // Prepend `source` so `#xxx` imports route to `src/*.ts` — the dist paths
+  // in `package.json#imports` only kick in if this plugin is republished as
+  // a library. Vite's defaults are restored because the option replaces
+  // rather than appends, and deps like `@excalidraw/excalidraw` need
+  // `import`/`browser` for their CSS/wasm subpaths.
   resolve: {
     conditions: ['source', 'module', 'browser', 'development', 'production', 'import'],
   },
