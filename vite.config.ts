@@ -13,7 +13,7 @@ import { meta } from './src/meta';
 
 export default defineConfig({
   plugins: [
-    ...composerPlugin({ entry: 'src/plugin.tsx', meta: { ...meta, version } }),
+    ...composerPlugin({ entry: 'src/ExcalidrawPlugin.tsx', meta: { ...meta, version } }),
     react(),
     wasm(),
   ],

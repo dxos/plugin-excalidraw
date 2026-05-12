@@ -2,12 +2,15 @@
 // Copyright 2025 DXOS.org
 //
 
+// @import-as-namespace
+
 import * as Schema from 'effect/Schema';
 
 import { Operation } from '@dxos/compute';
 
 import { meta } from '#meta';
-import { Excalidraw } from '#types';
+
+import * as Excalidraw from './Excalidraw';
 
 const EXCALIDRAW_OPERATION = `${meta.id}.operation`;
 

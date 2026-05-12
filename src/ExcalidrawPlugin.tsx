@@ -7,20 +7,19 @@ import * as Option from 'effect/Option';
 
 import { Plugin } from '@dxos/app-framework';
 import { AppPlugin } from '@dxos/app-toolkit';
-import { Annotation } from '@dxos/echo';
 import { Operation } from '@dxos/compute';
+import { Annotation } from '@dxos/echo';
 import { SpaceOperation } from '@dxos/plugin-space/operations';
 import { type CreateObject } from '@dxos/plugin-space/types';
 
 import { ExcalidrawSettings, OperationHandler, ReactSurface } from '#capabilities';
 import { meta } from '#meta';
+import { translations } from '#translations';
 import { Excalidraw } from '#types';
-
-import { translations } from './translations';
 
 // Default export is the entry the community registry loader expects: a Plugin
 // (or zero-arg factory). `Plugin.make` at the end of the pipe produces one.
-export default Plugin.define(meta).pipe(
+export const ExcalidrawPlugin = Plugin.define(meta).pipe(
   AppPlugin.addMetadataModule({
     metadata: {
       id: Excalidraw.Excalidraw.typename,
@@ -47,3 +46,5 @@ export default Plugin.define(meta).pipe(
   AppPlugin.addTranslationsModule({ translations }),
   Plugin.make,
 );
+
+export default ExcalidrawPlugin;

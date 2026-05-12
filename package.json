@@ -16,6 +16,8 @@
     "#hooks": "./src/hooks/index.ts",
     "#meta": "./src/meta.ts",
     "#operations": "./src/operations/index.ts",
+    "#plugin": "./src/ExcalidrawPlugin.tsx",
+    "#translations": "./src/translations.ts",
     "#types": "./src/types/index.ts"
   },
   "//": "@dxos/* deps track the `main` dist-tag on npm so the plugin runs against the same Composer host code that edge-main serves. Bump SHAs in lockstep when landing a host-side change.",

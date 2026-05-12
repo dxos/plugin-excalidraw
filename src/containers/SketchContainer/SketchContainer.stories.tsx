@@ -8,12 +8,12 @@ import React, { useState } from 'react';
 import { createObject } from '@dxos/echo-db';
 import { withLayout, withTheme } from '@dxos/react-ui/testing';
 
-import { EXCALIDRAW_SCHEMA, Excalidraw } from '#types';
+import { Excalidraw } from '#types';
 
 import { SketchContainer } from './SketchContainer';
 
 const DefaultStory = () => {
-  const [sketch] = useState(createObject(Excalidraw.make({ canvas: { schema: EXCALIDRAW_SCHEMA } })));
+  const [sketch] = useState(createObject(Excalidraw.make({ canvas: { schema: Excalidraw.EXCALIDRAW_SCHEMA } })));
 
   return <SketchContainer role='article' subject={sketch} attendableId='story' settings={{}} />;
 };
