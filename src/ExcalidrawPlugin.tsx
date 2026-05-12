@@ -10,8 +10,6 @@ import { meta } from '#meta';
 import { translations } from '#translations';
 import { Excalidraw } from '#types';
 
-// Default export is the entry the community registry loader expects: a Plugin
-// (or zero-arg factory). `Plugin.make` at the end of the pipe produces one.
 export const ExcalidrawPlugin = Plugin.define(meta).pipe(
   AppPlugin.addCreateObjectModule({ activate: CreateObject }),
   AppPlugin.addOperationHandlerModule({ activate: OperationHandler }),
