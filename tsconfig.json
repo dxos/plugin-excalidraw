@@ -19,6 +19,8 @@
       "#hooks": ["./src/hooks/index.ts"],
       "#meta": ["./src/meta.ts"],
       "#operations": ["./src/operations/index.ts"],
+      "#plugin": ["./src/ExcalidrawPlugin.tsx"],
+      "#translations": ["./src/translations.ts"],
       "#types": ["./src/types/index.ts"]
     }
   },
