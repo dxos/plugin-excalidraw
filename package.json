@@ -9,11 +9,6 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "pnpm": {
-    "overrides": {
-      "@dxos/vendor-kbn-handlebars": "0.8.4-main.dfabb4ec29"
-    }
-  },
   "imports": {
     "#capabilities": {
       "source": "./src/capabilities/index.ts",
@@ -89,7 +84,7 @@
     "@dxos/invariant": "0.8.4-main.dfabb4ec29",
     "@dxos/log": "0.8.4-main.dfabb4ec29",
     "@dxos/operation": "0.8.4-main.dfabb4ec29",
-    "@dxos/plugin-space": "0.8.4-main.1c7ec43d41",
+    "@dxos/plugin-space": "0.8.4-main.51f1e5ca51",
     "@dxos/react-client": "0.8.4-main.dfabb4ec29",
     "@dxos/react-ui": "0.8.4-main.dfabb4ec29",
     "@dxos/react-ui-form": "0.8.4-main.dfabb4ec29",
