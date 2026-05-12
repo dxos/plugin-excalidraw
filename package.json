@@ -66,11 +66,6 @@
       "source": "./src/plugin.ts",
       "types": "./dist/types/src/plugin.d.ts",
       "default": "./dist/lib/neutral/plugin.mjs"
-    },
-    "./translations": {
-      "source": "./src/translations.ts",
-      "types": "./dist/types/src/translations.d.ts",
-      "default": "./dist/lib/neutral/translations.mjs"
     }
   },
   "//": "@dxos/* deps track the `main` dist-tag on npm so the plugin runs against the same Composer host code that edge-main serves. Bump SHAs in lockstep when landing a host-side change.",
