@@ -12,8 +12,16 @@ import { version } from './package.json' with { type: 'json' };
 import { meta } from './src/meta';
 
 export default defineConfig({
+  // Prepend `source` so `#xxx` imports route to `src/*.ts` — the dist paths
+  // in `package.json#imports` only kick in if this plugin is republished as
+  // a library. Vite's defaults are restored because the option replaces
+  // rather than appends, and deps like `@excalidraw/excalidraw` need
+  // `import`/`browser` for their CSS/wasm subpaths.
+  resolve: {
+    conditions: ['source', 'module', 'browser', 'development', 'production', 'import'],
+  },
   plugins: [
-    ...composerPlugin({ entry: 'src/plugin.tsx', meta: { ...meta, version } }),
+    ...composerPlugin({ entry: 'src/ExcalidrawPlugin.tsx', meta: { ...meta, version } }),
     react(),
     wasm(),
   ],

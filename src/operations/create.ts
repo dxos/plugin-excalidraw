@@ -6,11 +6,10 @@ import * as Effect from 'effect/Effect';
 
 import { Operation } from '@dxos/compute';
 
-import { EXCALIDRAW_SCHEMA, Excalidraw } from '../types';
-import { Create } from './definitions';
+import { Excalidraw, ExcalidrawOperation } from '#types';
 
-const handler: Operation.WithHandler<typeof Create> = Create.pipe(
-  Operation.withHandler(({ name, schema = EXCALIDRAW_SCHEMA, content = {} }) =>
+const handler: Operation.WithHandler<typeof ExcalidrawOperation.Create> = ExcalidrawOperation.Create.pipe(
+  Operation.withHandler(({ name, schema = Excalidraw.EXCALIDRAW_SCHEMA, content = {} }) =>
     Effect.succeed({
       object: Excalidraw.make({ name, canvas: { schema, content } }),
     }),
