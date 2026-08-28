@@ -1,5 +1,11 @@
-name: SDK nightly (pkg.pr.new)
+# Depot CI Migration
+# Source: .github/workflows/sdk-nightly.yml
+#
+# Changes made:
+# - Rewrote .github/ path references to .depot/
+# - Changed GitHub runs-on labels to their Depot equivalents
 
+name: SDK nightly (pkg.pr.new)
 # Tracks the latest DXOS `main` build so the monorepo keeps pace with the SDK. Opens/updates a
 # single "SDK upgrade" PR pointing the `dxos` catalog at the latest pkg.pr.new build. These pins
 # may merge to `main` (keeps CI building against the latest SDK), but the release workflow refuses
@@ -7,19 +13,16 @@ name: SDK nightly (pkg.pr.new)
 #
 # The PR branch is fixed (`sdk-upgrade`), so a PR that has not landed is re-pinned to the newest SDK
 # each night rather than accumulating a queue of stale PRs — whenever it does land, it lands current.
-
 on:
   schedule:
     - cron: '0 7 * * *'
   workflow_dispatch:
-
 permissions:
   contents: write
   pull-requests: write
-
 jobs:
   upgrade:
-    runs-on: ubuntu-latest
+    runs-on: depot-ubuntu-latest # was: ubuntu-latest. Mapped standard GitHub runner to Depot equivalent.
     env:
       # Exposed so a step condition can branch on token presence: secrets are not allowed in `if:`.
       GH_DXOS_BOT_PAT: ${{ secrets.GH_DXOS_BOT_PAT }}
@@ -32,7 +35,7 @@ jobs:
         id: sha
         run: echo "sha=$(git ls-remote https://github.com/dxos/dxos.git refs/heads/main | cut -c1-7)" >> "$GITHUB_OUTPUT"
       # The catalog is repinned before installing, so setup only provisions the toolchain here.
-      - uses: ./.github/actions/setup
+      - uses: ./.depot/actions/setup
         with:
           install: 'false'
       - name: Point the dxos catalog at the latest pkg.pr.new build
@@ -51,7 +54,6 @@ jobs:
         run: |
           echo "::warning::GH_DXOS_BOT_PAT is not set; the PR is authored by github-actions[bot], so no" \
             "checks run on it and auto-merge can never fire. See RELEASING.md."
-
       - name: Open/update the SDK upgrade PR
         id: pr
         uses: peter-evans/create-pull-request@v6
@@ -69,7 +71,6 @@ jobs:
             release via the **SDK npm release** workflow once DXOS cuts an npm version.
 
             Auto-merge is enabled — this lands on its own once CI is green.
-
       # The diff is 21 identical URL substitutions plus a lockfile, which is exactly the review a
       # human rubber-stamps. `main` never publishes and the release guard blocks releasing from a
       # pkg.pr.new pin, so the worst case is a rolling pin that the next nightly replaces.
@@ -80,13 +81,12 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_DXOS_BOT_PAT || secrets.GITHUB_TOKEN }}
         run: gh pr merge --auto --squash "${{ steps.pr.outputs.pull-request-number }}"
-
       # A silent nightly failure is the hazard this workflow exists to prevent: tracking stops, and
       # the pinned pkg.pr.new artifacts age toward expiry until `main` no longer installs. The action
       # skips when no webhook is configured.
       - name: Notify on failure
         if: failure()
-        uses: ./.github/actions/notify
+        uses: ./.depot/actions/notify
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
           content: |

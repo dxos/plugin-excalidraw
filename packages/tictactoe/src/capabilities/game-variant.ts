@@ -5,41 +5,41 @@
 import * as Effect from 'effect/Effect';
 import * as Schema from 'effect/Schema';
 
-import { Capability } from '@dxos/app-framework';
+import * as Capability from '@dxos/app-framework/Capability';
 import { Type } from '@dxos/echo';
-import { GameCapabilities, type GameVariant } from '@dxos/plugin-game/types';
+import * as GameCapabilities from '@dxos/plugin-game/GameCapabilities';
 
 import { TicTacToeArticle, TicTacToeCard } from '#containers';
 import { TicTacToe } from '#types';
 
 const CreateTicTacToeInput = Schema.Struct({
   name: Schema.optional(
-    Schema.String.annotations({
+    Schema.String.annotate({
       title: 'Name',
       description: 'Optional name for the game.',
     }),
   ),
   size: Schema.optional(
-    Schema.Number.annotations({
+    Schema.Number.annotate({
       title: 'Size',
       description: 'Board dimension (3, 4, or 5). Default 3.',
     }),
   ),
   winCondition: Schema.optional(
-    Schema.Number.annotations({
+    Schema.Number.annotate({
       title: 'Win condition',
       description: 'Consecutive marks needed to win. Defaults to size.',
     }),
   ),
   level: Schema.optional(
-    TicTacToe.Level.annotations({
+    TicTacToe.Level.annotate({
       title: 'AI level',
       description: 'AI difficulty level (omit for human-vs-human).',
     }),
   ),
 });
 
-const variant: GameVariant = {
+const variant: GameCapabilities.GameVariant = {
   id: Type.getTypename(TicTacToe.State),
   label: 'Tic-Tac-Toe',
   icon: 'ph--hash-straight--regular',
@@ -51,7 +51,7 @@ const variant: GameVariant = {
       TicTacToe.make({
         size: typeof input.size === 'number' ? input.size : undefined,
         winCondition: typeof input.winCondition === 'number' ? input.winCondition : undefined,
-        level: input.level as TicTacToe.Level | undefined,
+        level: TicTacToe.isLevel(input.level) ? input.level : undefined,
       }),
     ),
   card: TicTacToeCard,
@@ -59,5 +59,5 @@ const variant: GameVariant = {
 };
 
 export default Capability.makeModule(() =>
-  Effect.succeed(Capability.contributes(GameCapabilities.VariantProvider, variant)),
+  Effect.succeed(Capability.contribute(GameCapabilities.VariantProvider, variant)),
 );

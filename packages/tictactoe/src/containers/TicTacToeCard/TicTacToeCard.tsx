@@ -6,7 +6,7 @@ import React from 'react';
 
 import { Obj } from '@dxos/echo';
 import { useObject } from '@dxos/echo-react';
-import { type GameVariantSurfaceProps } from '@dxos/plugin-game/types';
+import { type GameVariantSurfaceProps } from '@dxos/plugin-game/GameCapabilities';
 import { Card } from '@dxos/react-ui';
 
 import { TicTacToeBoard, getWinningCells } from '#components';

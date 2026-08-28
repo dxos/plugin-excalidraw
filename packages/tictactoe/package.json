@@ -88,6 +88,7 @@
   "devDependencies": {
     "@dxos/plugin-client": "catalog:dxos",
     "@dxos/plugin-testing": "catalog:dxos",
+    "@dxos/storybook-addon-logger": "catalog:dxos",
     "@storybook/react-vite": "catalog:",
     "@tailwindcss/vite": "catalog:",
     "@types/react": "catalog:",

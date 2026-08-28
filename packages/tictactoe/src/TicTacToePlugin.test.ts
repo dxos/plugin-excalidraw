@@ -4,28 +4,30 @@
 
 import { describe, test } from 'vitest';
 
-import { ActivationEvents } from '@dxos/app-framework';
-import { ClientPlugin } from '@dxos/plugin-client/plugin';
-import { GamePlugin } from '@dxos/plugin-game/plugin';
+import * as ClientPlugin from '@dxos/plugin-client/ClientPlugin';
+import * as GamePlugin from '@dxos/plugin-game/GamePlugin';
 import { createComposerTestApp } from '@dxos/plugin-testing/harness';
 
+import { meta } from '#meta';
 import { TicTacToePlugin } from '#plugin';
-
-import { meta } from './meta';
+import { TicTacToeOperation } from '#types';
 
 const moduleId = (name: string) => `${meta.profile.key}.module.${name}`;
 
 describe('TicTacToePlugin', () => {
   test('modules activate on the expected events', async ({ expect }) => {
     await using harness = await createComposerTestApp({
-      plugins: [ClientPlugin({}), GamePlugin(), TicTacToePlugin()],
+      plugins: [ClientPlugin.make({}), GamePlugin.make(), TicTacToePlugin()],
     });
 
-    // Modules expected to be active after a normal startup.
-    expect(harness.manager.getActive()).toEqual(expect.arrayContaining([moduleId('game-variant'), moduleId('schema')]));
+    expect(harness.manager.getActive()).toEqual(
+      expect.arrayContaining([moduleId('GameVariant'), moduleId('schema'), moduleId('OperationHandler')]),
+    );
+  });
 
-    // Operation handlers are not loaded on startup — SetupProcessManager fires lazily when an operation is invoked.
-    await harness.fire(ActivationEvents.SetupProcessManager);
-    expect(harness.manager.getActive()).toContain(moduleId('OperationHandler'));
+  test('invokes the Print operation via the invoker capability', async ({ expect }) => {
+    await using harness = await createComposerTestApp({ plugins: [GamePlugin.make(), TicTacToePlugin()] });
+    const { ascii } = await harness.invoke(TicTacToeOperation.Print, { board: 'XO-------', size: 3 });
+    expect(ascii).toContain('| X | O |');
   });
 });
