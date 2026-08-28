@@ -8,7 +8,7 @@ import * as Schema from 'effect/Schema';
 
 import { Operation } from '@dxos/compute';
 import { Database, DXN } from '@dxos/echo';
-import { Game } from '@dxos/plugin-game/types';
+import * as Game from '@dxos/plugin-game/Game';
 
 import { TicTacToe } from '#types';
 
@@ -20,18 +20,18 @@ export const MakeMove = Operation.make({
     icon: 'ph--x--regular',
   },
   input: Schema.Struct({
-    game: Game.GameRef(TicTacToe.State).annotations({
+    game: Game.GameRef(TicTacToe.State).annotate({
       description: 'The ID of the game object (variant must be Tic-Tac-Toe).',
     }),
-    position: Schema.String.annotations({
+    position: Schema.String.annotate({
       description: 'Position as "row,col" e.g. "1,2".',
     }),
   }),
   output: Schema.Struct({
-    board: Schema.String.annotations({
+    board: Schema.String.annotate({
       description: 'The board state after the move.',
     }),
-    status: Schema.String.annotations({
+    status: Schema.String.annotate({
       description: 'The game status after the move.',
     }),
   }),
@@ -46,23 +46,23 @@ export const AiMove = Operation.make({
     icon: 'ph--brain--regular',
   },
   input: Schema.Struct({
-    game: Game.GameRef(TicTacToe.State).annotations({
+    game: Game.GameRef(TicTacToe.State).annotate({
       description: 'The ID of the game object (variant must be Tic-Tac-Toe).',
     }),
     level: Schema.optional(
-      TicTacToe.Level.annotations({
+      TicTacToe.Level.annotate({
         description: 'Override AI difficulty level.',
       }),
     ),
   }),
   output: Schema.Struct({
-    board: Schema.String.annotations({
+    board: Schema.String.annotate({
       description: 'The board state after the AI move.',
     }),
-    status: Schema.String.annotations({
+    status: Schema.String.annotate({
       description: 'The game status after the AI move.',
     }),
-    position: Schema.String.annotations({
+    position: Schema.String.annotate({
       description: 'The position the AI chose as "row,col".',
     }),
   }),
@@ -77,10 +77,10 @@ export const Print = Operation.make({
     icon: 'ph--terminal--regular',
   },
   input: Schema.Struct({
-    board: Schema.String.annotations({
+    board: Schema.String.annotate({
       description: 'The board string.',
     }),
-    size: Schema.Number.annotations({
+    size: Schema.Number.annotate({
       description: 'Board dimension.',
     }),
   }),

@@ -6,7 +6,7 @@ import * as Effect from 'effect/Effect';
 
 import { Operation } from '@dxos/compute';
 import { Obj } from '@dxos/echo';
-import { loadGame } from '@dxos/plugin-game';
+import * as GameUtil from '@dxos/plugin-game/GameUtil';
 
 import { checkWin, currentTurn, placeMarker } from '#components';
 import { TicTacToe } from '#types';
@@ -16,7 +16,7 @@ import { TicTacToeOperation } from '../types';
 const handler: Operation.WithHandler<typeof TicTacToeOperation.MakeMove> = TicTacToeOperation.MakeMove.pipe(
   Operation.withHandler(
     Effect.fn(function* ({ game, position }) {
-      const { variant } = yield* loadGame(game, TicTacToe.State);
+      const { variant } = yield* GameUtil.loadGame(game, TicTacToe.State);
       const currentStatus = checkWin(variant.board, variant.size, variant.winCondition);
       if (currentStatus !== 'playing') {
         return yield* Effect.fail(new Error('GameOver'));
