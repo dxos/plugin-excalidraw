@@ -1,32 +1,35 @@
-name: SDK npm release
+# Depot CI Migration
+# Source: .github/workflows/sdk-npm-release.yml
+#
+# Changes made:
+# - Rewrote .github/ path references to .depot/
+# - Changed GitHub runs-on labels to their Depot equivalents
 
+name: SDK npm release
 # Run when DXOS cuts a published npm SDK release. Pins the `dxos` catalog to that npm version and
 # adds a release-together changeset for every plugin, then opens a PR. Merging it triggers the
 # release workflow, which publishes the rebuilt plugins (and you'd cut a Composer beta on the same
 # SDK). Honor the migration window before promoting to stable: ~1 week for non-breaking changes,
 # ~1 month–quarter for breaking ones (see RELEASING.md).
-
 on:
   workflow_dispatch:
     inputs:
       version:
         description: 'Published @dxos/* npm version or range (e.g. ^0.9.0). Defaults to the latest release.'
         required: false
-
 permissions:
   contents: write
   pull-requests: write
-
 jobs:
   bump:
-    runs-on: ubuntu-latest
+    runs-on: depot-ubuntu-latest # was: ubuntu-latest. Mapped standard GitHub runner to Depot equivalent.
     env:
       # Exposed so a step condition can branch on token presence: secrets are not allowed in `if:`.
       GH_DXOS_BOT_PAT: ${{ secrets.GH_DXOS_BOT_PAT }}
     steps:
       - uses: actions/checkout@v4
       # The catalog is repinned before installing, so setup only provisions the toolchain here.
-      - uses: ./.github/actions/setup
+      - uses: ./.depot/actions/setup
         with:
           install: 'false'
       # Resolves the latest release when no version was given, and reports back what it pinned.
@@ -49,7 +52,6 @@ jobs:
         run: |
           echo "::warning::GH_DXOS_BOT_PAT is not set; the PR is authored by github-actions[bot], so no" \
             "checks run on it. See RELEASING.md."
-
       - name: Open the SDK release PR
         uses: peter-evans/create-pull-request@v6
         with:
@@ -62,13 +64,12 @@ jobs:
             plugin (release-together). Merging triggers the release workflow to republish all plugins
             against the new SDK. Cut a Composer beta on the same SDK and observe the migration window
             before promoting to stable.
-
       # A silent failure here leaves the repo on a pkg.pr.new pin, which the release guard refuses to
       # publish — so the next release is blocked with nothing to point at. The action skips when no
       # webhook is configured.
       - name: Notify on failure
         if: failure()
-        uses: ./.github/actions/notify
+        uses: ./.depot/actions/notify
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
           content: |
